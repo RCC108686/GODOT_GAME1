@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cq0k7kw0p170y"]
+
+[ext_resource type="Script" uid="uid://bikshlhtlj1vb" path="res://CSP/GUNface.cs" id="1_j7qq5"]
+[ext_resource type="Script" uid="uid://braixvlyucbx3" path="res://CSP/Buttenfly.cs" id="1_q4i46"]
+[ext_resource type="PackedScene" uid="uid://cwvsvg05aqnud" path="res://textbutter.tscn" id="2_hi7mn"]
+[ext_resource type="Script" uid="uid://di0761clu275i" path="res://CSP/SpreadVisualizer.cs" id="3_sto35"]
+
+[node name="TestGun" type="Node2D" unique_id=187085603]
+position = Vector2(-1, 3)
+scale = Vector2(0.9875247, 0.9875)
+script = ExtResource("1_q4i46")
+CanSwitchMode = false
+FireRate = 0.01
+MaxAmmo = 100
+BulletPrefab = ExtResource("2_hi7mn")
+ExecutSpread = 79.94
+spreadBonus = 0.1
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=586541753]
+position = Vector2(60.757977, 1.0126584)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=763200665]
+position = Vector2(1.012633, -2.0253165)
+offset = Vector2(-19, -15)
+polygon = PackedVector2Array(-3, 2, -3, 22, 83, 18)
+script = ExtResource("1_j7qq5")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1013123618]
+visible = false
+position = Vector2(53.669544, 0)
+script = ExtResource("3_sto35")
+ShowGuide = false

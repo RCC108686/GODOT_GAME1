@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://die2hnpbp2g0g"]
+
+[ext_resource type="Script" uid="uid://fyi62jky6262" path="res://CSP/hit.cs" id="1_qux7b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cj2mj"]
+radius = 34.058773
+
+[node name="Enemy1" type="CharacterBody2D" unique_id=1295843485 groups=["EM"]]
+collision_layer = 2
+collision_mask = 10
+script = ExtResource("1_qux7b")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1125251045]
+position = Vector2(-2, 0)
+scale = Vector2(0.67241377, 0.64444447)
+offset = Vector2(-11, -28)
+polygon = PackedVector2Array(-20, -11, 43, -15, 64, 28, 18, 77, -40, 49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1095977830]
+position = Vector2(-2.9999998, -1)
+shape = SubResource("CircleShape2D_cj2mj")
